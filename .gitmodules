@@ -1,0 +1,14 @@
+[submodule "third_party/vaidya-walk"]
+	path = third_party/vaidya-walk
+	url = https://github.com/rzrsk/vaidya-walk.git
+[submodule "third_party/concolic"]
+	path = third_party/concolic
+	url = https://github.com/Tricker-z/symcc.git
+	branch = cohyzz
+[submodule "fuzzer"]
+	path = fuzzer
+	url = https://github.com/Tricker-z/AFL.git
+	branch = cohyzz
+[submodule "third_party/z3"]
+	path = third_party/z3
+	url = https://github.com/Z3Prover/z3.git
