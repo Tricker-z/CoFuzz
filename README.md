@@ -82,3 +82,9 @@ src/cohuzz.py -o $OUTPUT -a afl -c $CFG_FILE
 ```
 
 For running a demo program `readelf`, please turn to the document in [Demo](docs/run_target.md).
+
+
+## Data
+
+- The data for unique crashes and figures in paper is in [Data](data).
+- The assigned CVEs are in [cve](docs/cves.md). Note that the new CVEs are still in the status of *RESERVED*, thus the details are placed here until being published.
