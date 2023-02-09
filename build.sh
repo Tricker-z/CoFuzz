@@ -30,7 +30,7 @@ CC=clang-10 CXX=clang++-10 cmake -G Ninja     \
     -DCMAKE_BUILD_TYPE=RelWithDebInfo         \
     -DZ3_TRUST_SYSTEM_VERSION=on              \
     -DLLVM_DIR=/usr/lib/llvm-10/cmake         \
-    -DZ3_DIR=/workspace/Cohuzz/third_party/z3 \
+    -DZ3_DIR=/workspace/CoFuzz/third_party/z3 \
     ../
 ninja all
 

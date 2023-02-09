@@ -1,7 +1,7 @@
-# Cohuzz
+# CoFuzz
 Coordinated hybrid fuzzing framework with advanced coordination mode
 
-## Build Cohuzz
+## Build CoFuzz
 
 ### Environment
 
@@ -21,21 +21,21 @@ $ ./build.sh
 
 ### Build with Docker
 
-We highly recommend to run Cohuzz using the docker container.
+We highly recommend to run CoFuzz using the docker container.
 
 ```shell
 # Build docker image
-$ docker build -t cohuzz ./
+$ docker build -t cofuzz ./
 
 # Run docker container
-$ docker run -itd --privileged cohuzz /bin/bash
+$ docker run -itd --privileged cofuzz /bin/bash
 ```
 
-## Running Cohuzz
+## Running CoFuzz
 
 ### Program instrumentation
 
-Cohuzz compiles the target program into three binaries with seperate instrumentation.
+CoFuzz compiles the target program into three binaries with seperate instrumentation.
 
 ```shell
 # Tracing execution path
@@ -56,7 +56,7 @@ make -j$(nproc)
 
 ### Start Hybrid Fuzzing
 
-For running Cohuzz, a configuration file is required with the following format.
+For running CoFuzz, a configuration file is required with the following format.
 
 ```
 [put]
@@ -71,14 +71,14 @@ Environment variables:
 - **INPUT**: initial seed corpora
 - **OUTPUT**: output directory
 - **FUZZ_CMD**: command for running program for AFL
-- **CFG_FILE**: configuration file for Cohuzz
+- **CFG_FILE**: configuration file for CoFuzz
 
 ```shell
 # Running fuzzing stratrgy
 fuzzer/afl-fuzz -S afl -m none -i $INPUT -o $OUTPUT  -- $FUZZ_CMD
 
-# Running Cohuzz (concolic execution + coordination mode)
-src/cohuzz.py -o $OUTPUT -a afl -c $CFG_FILE
+# Running CoFuzz (concolic execution + coordination mode)
+src/cofuzz.py -o $OUTPUT -a afl -c $CFG_FILE
 ```
 
 For running a demo program `readelf`, please turn to the document in [Demo](docs/run_target.md).

@@ -22,8 +22,8 @@ BYTE_ORDER = 'little'
 
 CUR_INPUT = '.cur_input'
 
-DEFAULT_LOG_PATH = 'cohuzz.log'
+DEFAULT_LOG_PATH = 'cofuzz.log'
 
-DEFAULT_CONCOLIC_NAME = 'cohuzz'
+DEFAULT_CONCOLIC_NAME = 'cofuzz'
 
 DEFAULT_SAMPLER = 'john'

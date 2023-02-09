@@ -5,12 +5,12 @@ lava-dataset download:http://panda.moyix.net/~moyix/lava_corpus.tar.xz
 
 ## Add wrapped functions
 
- In order for cohuzz to work properly on the lava-m dataset, we need to additionally intercept the I/O functions used in lava-m, , which requires changes to the source code of concolic executor.
+ In order for cofuzz to work properly on the lava-m dataset, we need to additionally intercept the I/O functions used in lava-m, , which requires changes to the source code of concolic executor.
 
 
 ### Step1
 
-In `Cohuzz/third_party/concolic/compiler/Runtime.cpp`
+In `CoFuzz/third_party/concolic/compiler/Runtime.cpp`
 
 Function `bool isInterceptedFunction(const Function &f)` :
 
@@ -50,7 +50,7 @@ bool isInterceptedFunction(const Function &f) {
 
 ### Step2
 
-In `Cohuzz/third_party/concolic/runtime/LibcWrappers.cpp`
+In `CoFuzz/third_party/concolic/runtime/LibcWrappers.cpp`
 
 Add the function bodies mentioned in **Step1** in namespace.
 

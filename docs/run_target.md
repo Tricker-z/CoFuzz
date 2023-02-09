@@ -1,6 +1,6 @@
 # Running a Target Program
 
-Here we illustrate how to execute Cohuzz for readelf (binutils-2.37) with [wllvm](https://github.com/travitch/whole-program-llvm).
+Here we illustrate how to execute CoFuzz for readelf (binutils-2.37) with [wllvm](https://github.com/travitch/whole-program-llvm).
 
 ## Instrumentation
 
@@ -23,15 +23,15 @@ $ third_party/concolic/qsym/symcc readelf.bc -o readelf_cohuzz
 
 
 
-## Running Cohuzz
+## Running CoFuzz
 
 Here the configure file for readelf (readelf.cfg)
 
 ```
 [put]
 # Program under test
-cohuzz_bin=/workspace/Cohuzz/test/readelf_cohuzz
-trace_bin=/workspace/Cohuzz/test/readelf_trace
+cohuzz_bin=/workspace/CoFuzz/test/readelf_cohuzz
+trace_bin=/workspace/CoFuzz/test/readelf_trace
 argument=-a @@
 ```
 
@@ -39,9 +39,9 @@ Running the hybrid fuzzing
 
 ```shell
 # Running AFL
-$ /workspace/Cohuzz/fuzzer/afl-fuzz -m none -i fuzz_in/ -o fuzz_out/ -S afl -- ./readelf_afl -a @@
+$ /workspace/CoFuzz/fuzzer/afl-fuzz -m none -i fuzz_in/ -o fuzz_out/ -S afl -- ./readelf_afl -a @@
 
-# Running Cohuzz
-$ /workspace/Cohuzz/src/cohuzz.py -c ./readelf.cfg -o fuzz_out/ -a afl
+# Running CoFuzz
+$ /workspace/CoFuzz/src/cofuzz.py -c ./readelf.cfg -o fuzz_out/ -a afl
 ```
 

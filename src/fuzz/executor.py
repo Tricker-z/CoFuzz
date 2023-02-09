@@ -17,7 +17,7 @@ from fuzz.trace import CorpusTracer
 
 class HybridExecutor:
     def __init__(self, trace_bin, concolic_bin, argument, fuzz_out, concolic_out, log_path, sampler):
-        """Cohuzz Executor"""
+        """CoFuzz Executor"""
         self.logger = utils.init_logger(log_path, log_path.name)
         self.afl_config = AFLConfig(fuzz_out)
         self.afl_map = AFLMap(self.afl_config.fuzz_bitmap)
@@ -129,7 +129,7 @@ class HybridExecutor:
 
     def run(self):
         """Main loop"""
-        self.logger.info(f'Cohuzz starts in {self.tmp_dir}')
+        self.logger.info(f'CoFuzz starts in {self.tmp_dir}')
         while True:
             # trace the seeds
             trace_list = self.__seek_trace_seeds()

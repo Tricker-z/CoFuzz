@@ -10,11 +10,11 @@ from fuzz.executor import HybridExecutor
 
 def parse_args() -> Namespace:
     """Parse command line arguments"""
-    parser = ArgumentParser(description='Cohuzz')
+    parser = ArgumentParser(description='CoFuzz')
     parser.add_argument('-c', dest='config', required=True, type=valid_path, help='Path of the configure file')
     parser.add_argument('-o', dest='output', required=True, type=valid_path, help='Path of the AFL output directory')
     parser.add_argument('-a', dest='afl', required=True, type=str, help='AFL fuzzer name')
-    parser.add_argument('-n', dest='name', default=config.DEFAULT_CONCOLIC_NAME, type=str, help='Cohuzz Name')
+    parser.add_argument('-n', dest='name', default=config.DEFAULT_CONCOLIC_NAME, type=str, help='CoFuzz Name')
     parser.add_argument('-l', dest='log', default=config.DEFAULT_LOG_PATH, type=str, help='log file path')
     parser.add_argument('-s', dest='sampler', default=config.DEFAULT_SAMPLER, type=str, help='sampler algorithm')
     return parser.parse_args()

@@ -7,7 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y git clang-10 llvm-10-dev l
 
 WORKDIR /workspace
 
-RUN git clone https://github.com/leviljiang/Cohuzz.git && \
-    cd Cohuzz &&                                          \
-    git submodule update --init --recursive &&            \
+RUN git clone https://github.com/Tricker-z/CoFuzz.git && \
+    cd CoFuzz &&                                         \
+    git submodule update --init --recursive &&           \
     ./build.sh
