@@ -1,6 +1,21 @@
 # CoFuzz
 Coordinated hybrid fuzzing framework with advanced coordination mode
 
+## Publication
+
+[Evaluating and Improving Hybrid Fuzzing](https://ieeexplore.ieee.org/document/10172801), ICSE'2023
+
+```
+@inproceedings{jiang2023evaluating,
+  title = {Evaluating and improving hybrid fuzzing},
+  author = {Jiang, Ling and Yuan, Hengchen and Wu, Mingyuan and Zhang, Lingming and Zhang, Yuqun},
+  doi = {10.1109/ICSE48619.2023.00045},
+  booktitle = {2023 IEEE/ACM 45th International Conference on Software Engineering (ICSE)},
+  pages = {410-422},
+  year={2023}
+}
+```
+
 ## Build CoFuzz
 
 ### Environment
