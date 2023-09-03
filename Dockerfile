@@ -6,7 +6,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y git clang-10 llvm-10-dev l
     libboost-all-dev libeigen3-dev swig
 
 WORKDIR /workspace
-
+RUN python3 -m pip install numpy scikit-learn z3 six tqdm
 RUN git clone https://github.com/Tricker-z/CoFuzz.git && \
     cd CoFuzz &&                                         \
     git submodule update --init --recursive &&           \
