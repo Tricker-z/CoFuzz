@@ -2,7 +2,7 @@
 
 base_path=`pwd`
 mkdir /tmp/output
-pip3 install -r requirements
+pip3 install -r requirements.txt
 
 # Build fuzzer AFL-2.57
 pushd fuzzer
